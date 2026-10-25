@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جواك | GOWAK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101225;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 24px;
+      font-size: 28px;
+      color: #c4b5fd;
+      font-weight: bold;
+    }
+    main {
+      max-width: 600px;
+      margin: 35px auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #ddd6fe;
+    }
+    p {
+      color: #cbd5e1;
+      line-height: 1.9;
+    }
+    textarea {
+      width: 100%;
+      height: 160px;
+      padding: 14px;
+      box-sizing: border-box;
+      border: 1px solid #444768;
+      border-radius: 12px;
+      background: #1b1e35;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 15px;
+      padding: 13px 25px;
+      border: 0;
+      border-radius: 10px;
+      background: #8b5cf6;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    .note {
+      font-size: 13px;
+      color: #a5b4fc;
+    }
+    footer {
+      padding: 30px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>جَواك 🌙</header>
+  <main>
+    <h1>كل اللي جواك.. ليه مكان.</h1>
+    <p>
+      هنا مش لازم تبان قوي.<br>
+      اكتب اللي جواك، حتى لو مش عارف تبدأ منين.
+    </p>
+
+    <textarea id="story" maxlength="2000"
+      placeholder="احكي حكايتك هنا..."></textarea>
+
+    <br>
+    <button onclick="publish()">فضفض من قلبك 🖤</button>
+
+    <p class="note">
+      دي نسخة تجريبية: كلامك مش بيتنشر للناس حاليًا.
+    </p>
+
+    <section id="result"></section>
+  </main>
+  <footer>جواك © 2026</footer>
+
+  <script>
+    function publish() {
+      const story = document.getElementById("story");
+      const result = document.getElementById("result");
+
+      if (!story.value.trim()) {
+        alert("اكتب اللي جواك الأول ❤️");
+        return;
+      }
+
+      result.textContent =
+        "فضفضتك ظهرت عندك في المعاينة، لكنها لم تُنشر على الإنترنت.";
+      story.value = "";
+    }
+  </script>
+</body>
+</html>
